@@ -1,3 +1,7 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* general */
 :root{
     font-size: 67%;
     --color-pink: rgb(225, 183, 191);
@@ -6,11 +10,37 @@
     --color-white: rgb(255, 255, 255);
     --color-black: rgb(0, 0, 0);
 }
-*,*::after,*::before{
+
+html{
+position: relative;
+min-height: 100%;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-white);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+*,
+*::after,
+*::before{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
+.container{
+    width:100%;
+    padding: 0 20rem;
+}
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background */
 .backgrounds{
     position: absolute;
     width: 100%;
@@ -31,4 +61,96 @@
     position: relative;
     height: 48.65%;
     background-color: var(--color-pink);
+}
+
+/* Header */
+.header{
+    height: 5rem;
+    width: 100%;
+    background-color: transparent;
+}
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    display: grid;
+    height: 5rem;
+    width: 5rem;
+    padding: 0.8rem 0;
+    text-align: center;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: var(--color-violet);
+}
+
+.header__logo  p{
+    height: 100%;
+    width: auto;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.header__nav-menu{
+    display: grid;
+    height: 100%;
+    width: auto;
+    text-align: center;
+}
+.nav-menu__icon{
+    margin-top: 0.8rem;
+    height: 4rem;
+    width: 4rem;
+    color: var(--color-purple);
+}
+.nav-menu__icon i{
+    font-size: 3rem;
+}
+
+/* Motto section */
+.motto__content{
+    display: flex;
+    height: 10.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.motto__title{
+    color: var(--color-purple);
+    font-size: 4rem;
+}
+
+/* Cards section */
+
+.floating-cards{
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    width: 15rem;
+    border-radius: 2%;
+    background-color: var(--color-white);
+}
+
+@media screen and (min-width: 450px) {
+    .floating-cards{
+        flex-direction: row;
+    }
+    .floating-cards .card:nth-child(2){
+        margin-top: 8rem;
+    }
+    .floating-cards .card:nth-child(3){
+        margin-top: 16rem;
+    }
+    .card{
+        height: 50rem;
+        width: 28rem;
+        background-color: var(--color-white);
+    }
 }
