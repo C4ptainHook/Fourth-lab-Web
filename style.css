@@ -112,7 +112,7 @@ body{
 /* Motto section */
 .motto__content{
     display: flex;
-    height: 12.35rem;
+    height: 8rem;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -130,11 +130,10 @@ body{
     display: flex;
     padding: 0;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 71.17rem;
     gap: 2rem;
-    margin-bottom: 10rem;
+    align-items: center;
+    height: 80rem;
+    margin-bottom: 3rem;
 }
 
 .card{
@@ -142,7 +141,7 @@ body{
     flex-direction: column;
     overflow: hidden;
     align-items: center;
-    height: 28rem;
+    height: 25rem;
     width: 15rem;
     border-radius: 2%;
     padding: 1rem 0.8rem;
@@ -158,7 +157,7 @@ body{
     margin: 5% 0;
     padding: 0 15%;
     font-weight: 380;
-    font-size: 1.15rem;
+    font-size: 1.12rem;
 }
 .card__text{
     text-align: justify;
@@ -197,6 +196,9 @@ body{
 }
 
 @media screen and (min-width: 1024px) {
+    .motto__content{
+        height: 12.35rem;
+    }
     .header__logo  p{
         height: 100%;
         width: auto;
@@ -212,12 +214,16 @@ body{
     .floating-cards{
         flex-direction: row;
         justify-content: space-between;
+        gap:2rem;
     }
     .floating-cards .card:nth-child(1){
         margin-top: -18rem;
     }
     .floating-cards .card:nth-child(3){
         margin-top: 22rem;
+    }
+    .floating-cards{
+        margin-bottom: 10rem;
     }
     .card{
         height: 46rem;
